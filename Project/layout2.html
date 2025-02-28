@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örnek Sayfa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container">
+    <header class="bg-primary text-white text-center p-3">
+        <h1>Benim Web Sitem</h1>
+    </header>
+
+    <nav class="nav justify-content-center bg-light p-2">
+        <a class="nav-link" href="#">Ankara</a>
+        <a class="nav-link" href="#">İstanbul</a>
+        <a class="nav-link" href="#">İzmir</a>
+    </nav>
+
+    <article class="mt-4">
+        <h2>Haberler</h2>
+        <p>Bugün hava çok güzel!</p>
+    </article>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        © 2024 Tüm Hakları Saklıdır.
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--ö örnek bootstrap kullanılarak zenginleştirilmiş html
+Bootstrap, HTML, CSS ve JavaScript kullanılarak yazılmış, açık kaynaklı ve ücretsiz bir front-end kütüphanesidir. -->
+
+
+<!-- yukarıdaki html kodunun açıklaması:
+-----  <head> Etiketi ----------
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örnek Sayfa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+a. <meta charset="UTF-8">
+➡ Sayfanın karakter setini belirtir.
+Bu etiket, sayfanın doğru karakterleri ve özel simgeleri gösterebilmesi için UTF-8 karakter seti kullanır.
+
+b. <meta name="viewport" content="width=device-width, initial-scale=1.0">
+➡ Sayfanın mobil uyumlu olmasını sağlar.
+Bu, sayfanın genişliğinin cihazın ekran genişliğiyle aynı olmasını sağlar ve zoom seviyesini 1 olarak ayarlar. Mobil cihazlarda sayfa düzgün görüntülenir.
+
+c. <title>Örnek Sayfa</title>
+➡ Sayfanın başlığını tanımlar.
+Tarayıcı sekmesinde görünen sayfa başlığıdır. Kullanıcılar sayfanızı açtığında bu başlık gösterilir.
+
+d. <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+➡ Bootstrap CSS framework'ünü sayfaya ekler.
+Bu link, sayfanıza Bootstrap'i dahil eder, böylece responsive tasarım ve hazır stil bileşenlerini kullanabilirsiniz.
+------------ <body> Etiketi-------------
+
+  <body class="container">
+class="container" özelliği, Bootstrap’in konteyner sınıfını kullanarak içeriği sayfanın ortasına yerleştirir ve düzgün hizalar.
+
+-------<header> Etiketi---------
+  <header class="bg-primary text-white text-center p-3">
+    <h1>Benim Web Sitem</h1>
+</header>
+➡ Sayfanın başlık kısmıdır.
+class="bg-primary text-white text-center p-3":
+
+bg-primary: Başlık arka planını mavi yapar.
+text-white: Metni beyaz renkte yapar.
+text-center: Başlığı ortalar.
+p-3: Padding (iç boşluk) ekler.
+📌 Bu başlık genellikle logo, sayfa adı veya ana başlık gibi içerikleri içerir.
+
+--------- <nav> Etiketi---------------
+<nav class="nav justify-content-center bg-light p-2">
+    <a class="nav-link" href="#">Ankara</a>
+    <a class="nav-link" href="#">İstanbul</a>
+    <a class="nav-link" href="#">İzmir</a>
+</nav>
+
+➡ Sayfanın navigasyon (menü) kısmıdır.
+class="nav justify-content-center bg-light p-2":
+
+nav: Bootstrap'in navigasyon menüsü stilini ekler.
+justify-content-center: Menü öğelerini ortalar.
+bg-light: Menü arka planını açık yapar.
+p-2: Padding (iç boşluk) ekler.
+🔗 Her bir <a> etiketi, menü öğelerine tıklanabilir bağlantılar ekler
+  
+  -------- <article> Etiketi-----------
+    <article class="mt-4">
+    <h2>Haberler</h2>
+    <p>Bugün hava çok güzel!</p>
+</article>
+
+
+➡ Sayfanın ana içeriğini tanımlar.
+class="mt-4":
+
+mt-4: Üst tarafta boşluk ekler (margin-top).
+Bu etiket genellikle blog yazıları, haberler veya ana içerik için kullanılır.
+
+
+----<footer> Etiketi------
+
+  <footer class="bg-dark text-white text-center p-3 mt-4">
+    © 2024 Tüm Hakları Saklıdır.
+</footer>
+
+➡ Sayfanın alt kısmıdır.
+class="bg-dark text-white text-center p-3 mt-4":
+
+bg-dark: Arka planı koyu yapar.
+text-white: Metni beyaz yapar.
+text-center: Metni ortalar.
+p-3: Padding (iç boşluk) ekler.
+mt-4: Üst kısmına boşluk ekler.
+📌 Genellikle telif hakkı bilgileri veya iletişim bağlantıları burada yer alır.
+
+Özetle
+Bu HTML şablonu:
+
+Başlık, menü, ana içerik ve footer gibi temel sayfa bölümlerini içerir.
+Bootstrap'in sunduğu responsive özellikler ile mobil uyumlu hale getirilmiştir.
+Her bölümde CSS sınıfları ile stil verilmiş ve sayfa düzeni sağlanmıştır.
+📌 Eğer daha kapsamlı bir stil ve içerik eklemek isterseniz, CSS kodları veya Bootstrap bileşenlerini kullanarak sayfanın görsel yönünü geliştirebilirsiniz.-->
+
+
+
+
+

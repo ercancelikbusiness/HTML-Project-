@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css" />
+    <script src="lib/script.js"></script>
+  </head>
+
+  <body>
+    <!-- link kullanım örneği yapacağız linkler <a> html kodu ile başlar
+    aşağıdaki index html i direkt olarak görmesinin nedeni index ve link
+    dosyalarının aynı klasörde olmasından kaynaklı ayrıca şuan plunker üzerinde geliştirme yapıyoruz çıktı index.html'i  referans alarak gösteriyor diğer dosyaların çıktılarını  görüntülemek için her dosya içine basit bir link koyarsak  index  dosyasının çıktısını gösterse b ile çıktı üzerindeki link ile diğer dosyaların çıktısına ulaşabiliriz   -->
+
+    <a href="index.html"> anasayfaya ( index dosyası ) gitmek için tıkla</a>
+    <br/>
+
+    <!--  href bir atribut 'dur aynı kısma başka bir atribut daha ekleyebiliriz mesela aşağıda   "target" atribut'unun kullanımı görelim Tanım: Bağlantının hangi sekmede veya pencerede açılacağını belirler.linke tıklandığında aynı sayfada değilde yeni sekmede açılmasını sağlamaktadır
+
+    target="_blank" → Bağlantıyı yeni sekmede açar.
+    target="_self" → Bağlantıyı aynı sekmede açar (varsayılan değerdir).
+    target="_parent" → Çerçeve içinde çalışıyorsa, üst çerçevede açar.
+    target="_top" → Tüm çerçeveleri kaldırıp ana sekmede açar.
+    -->
+
+    <a href="https://github.com/ercancelikbusiness" target="_blank"
+      >ercan çelik github adresine yeni sekmede gitmek için tıkla</a>
+
+      <br>
+
+      <!-- yukarıdaki gibi linke tıklanacak kısımdaki açıklama yazısı yerine sadece bir resimde kullanabiliriz bunun için <img> tag'ini kullanacağız  ve bu resmide nerden  referans alacağını belirtmek içinde img taginin atributu olan    "src" den yararlanacağız ve resim linki bozulduysa  bulunamazsa "alt" atributu ile kullanıcıya  default ne göstereceğimizi belirtiriz  "width" ve "height" atributları ile resmin boyutunu ayarlarız bu arada  <img> etiketi boş bir etikettir, kapanış etiketi (</img>) kullanılmaz. diğer boş etiketleri öğrenmek için yapay zekaya html boş etiketler ve kullanımları yazabilirsin-->
+
+      <!-- Açıklama:
+      Etiket (Tag): HTML’de bir öğeyi tanımlayan yapıdır. Örneğin: <a>, <img>, <p>, <div> gibi.
+      Atribut (Attribute): Etiketlere eklenen ve onların davranışlarını veya görünümlerini belirleyen özelliklerdir. Örneğin: src, href, alt, width, height gibi.
+      -->
+
+      <!-- Şablon:-->
+
+      <a href="" target="_blank"> <img width="" height="" alt="" src=""> </a> 
+
+      
+      <a href="https://www.youtube.com/results?search_query=HTML+dersleri&sp=CAA%253D" target="_blank"> <img width="100" height="100" alt="resim Görüntülenmiyor" src="https://img.freepik.com/premium-photo/youtube-logo-icon-modern-3d-style_485374-28912.jpg?semt=ais_hybrid"></a>
+
+      <br>
+
+      <!-- aşağıdaki ise linksiz bir resim örneği-->
+      <img width="100" height="100" src="https://img.freepik.com/premium-photo/youtube-logo-icon-modern-3d-style_485374-28912.jpg?semt=ais_hybrid">
+
+
+
+
+
+  </body>
+</html>

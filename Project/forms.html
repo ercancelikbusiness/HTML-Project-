@@ -1,0 +1,132 @@
+<!--- input tag'ini kapatmaya gerek yoktur yani tek <> yeterli 
+<input type="text" name="username">
+<input type="text" name="username"/>
+
+yukardaki ikiside doğrudur ama  xhtml uyumluluğu için 2. olanı kullan ama günümüzde xhtml zorunlulugu kalmamış...
+
+aşağıdaki örnekte  name'deki "firstName" değişkendir type'deki "text" keyworddur yani tip özelliğidir tıpkı password gibi... labelde yazanlar kendi uydurmamız mesela submit bir keyword dür yani bir işlevi vardır
+ gönder butonu yaratır  submit'in yanına value="Kaydet" dersen butonda kaydet yazısı cıkar ama submit sadece yazarsan muhtemelen tarayıcıda ya submit yada gönder yazısı cıkacaktır(turkçeye oto çevirirse). kısaca submit in olayı actiona formu yollamak... 
+ buttonda benzer işi görür ama  genelde javaScript cagrıları için kullanılır en altta detaylı anlattım...
+
+required : zorunluluk demektir boş alan kalırsa uyarı vermesi demektir.
+forms'larda kullanılır 
+ <!--  select tag'i seçenek sunma tag'idir gender kısmında gender adlı değişkene kullanıcı hangisini seçerse o atılacak yani gender bir keyword deil işlevi yok değişkendir backand'de
+ veriyi içine alır ( kadın,erkek)  şeklinde
+ car bölümündeki size"3" kutu açıldığında 3 lü şekilde gözükmesine yarar
+ multiple ise ctrl basılı tutarken  çoklu seçim yapılmasına olanak tanır direk mauslada seçiliyor gerçi  yani değişkene birden fazla veri atayabilir.
+ textarea tag'i   kullanıcıdan  metin yazısı almak için kullanılır
+ görünen kutunun sınırları  rows ve cols ile belirlenir yani satır rows  ve sütün(genişlik) cols ile belirlenir.  ama bu kullanıcıya izin verilen yazma hakkı değil ekranda görüntülenen kutucugun boyutu gibi düşün kullanıcıya sınır koymak için maxlength="120" yapabiliriz mesela-->
+
+
+
+ <form action="gonderilecek.dosya">
+    <label>First Name: </label><input name="firstName" type="text" required />
+    <br />
+    <label>Password: </label><input name="passWord" type="password" required />
+    <br>
+  
+    <label>Cinsiyet : </label>
+  
+    <select name="gender">
+    <option> Erkek </option>
+     <option> Kadın </option>
+    </select>
+  
+    <br>
+   <label>En sevdiğiniz araba? : </label>
+  
+     <select name="car" size="3" multiple>
+     <option> Volvo </option>
+     <option> volkswagen </option>
+      <option> ford </option>
+     <option> fiat </option>
+    
+    </select> 
+    <br>
+    <label>Hakkınızda : </label>
+    <textarea name="biography" rows="4" cols="30"> </textarea>
+  <br>
+    <input type="submit" value="Kaydet" />
+    <button onclick="alert('Kaydete basıldı')" >Kaydet2</button>
+  </form>
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- HTML'deki <form> etiketinde bulunan action özelliği, form verilerinin gönderileceği hedef URL’yi belirtir yani submit actions'a yönlendirir..
+  
+    Eğer bu form bir sunucuya gönderilecekse, genellikle action içine bir backend endpoint'i (örn. process.php, submit-form.php, https://api.example.com/submit) yazılır.
+  
+  Ancak burada somesite.html sadece bir HTML dosyasıdır, yani normal şartlarda form verisini işleyemez.
+  Eğer JavaScript veya bir backend dili (PHP, Node.js, Python, vb.) kullanarak veriyi işleyen bir dosya yoksa, form gönderildiğinde somesite.html sadece açılır ama veriler bir yere kaydedilmez.
+  
+  Eğer bu form verilerini sunucuya göndermek istiyorsan, action olarak bir backend dosyası veya API endpoint'i belirtmelisin-
+  
+  textarea kısmında Eğer kullanıcı 4 satırdan fazla yazamasın istiyorsan, JavaScript kullanarak manuel bir kontrol ekleyebilirsin:
+  
+  
+  <textarea id="biography" rows="4" cols="30"></textarea>
+  <script>
+    document.getElementById("biography").addEventListener("input", function () {
+      let lines = this.value.split("\n").length; // Satır sayısını hesapla
+      if (lines > 4) {
+        alert("En fazla 4 satır yazabilirsiniz!");
+        this.value = this.value.substring(0, this.value.lastIndexOf("\n")); // Son satırı sil
+      }
+    });
+  </script>
+  
+  
+  ---------------------------
+  
+  <input type="submit"> ve <button> arasındaki farklar
+  Her ikisi de buton gibi görünse de bazı önemli farkları vardır:
+  
+  1️⃣ <input type="submit">
+  Otomatik olarak formu gönderir.
+  value="Kaydet" gibi bir değer alarak butonun üzerinde yazan metni belirleyebilir.
+  Sadece form içinde kullanılır, çünkü form gönderme işlemi yapar.
+  📌 Örnek:
+  
+  
+  <input type="submit" value="Kaydet" />
+  🔹 Ne yapar?
+  ✅ Butona tıklandığında, form içeriğini "action" URL'sine gönderir.
+  
+  2️⃣ <button> (Varsayılan Davranışına Göre)
+  Varsayılan olarak formu submit eder, ancak farklı türlerde kullanılabilir:
+  <button type="submit"> → Formu gönderir.
+  <button type="button"> → Hiçbir şey yapmaz, sadece tıklama eventi için kullanılır.
+  <button type="reset"> → Formdaki alanları sıfırlar.
+  İçeriğinde HTML kullanabilir (örneğin, ikon ekleyebilirsin).
+  value yerine butonun içeriğine yazı veya başka elementler koyabilirsin.
+  📌 Örnek:
+  
+  
+  <button type="submit">Kaydet</button>  -- Formu gönderir 
+  <button type="button">Tıklama Butonu</button> -- Hiçbir şey yapmaz 
+  <button type="reset">Formu Temizle</button>--  Form alanlarını sıfırlar 
+  🔹 Ne yapar?
+  
+  Eğer type belirtilmezse, varsayılan olarak type="submit" kabul edilir ve formu gönderir.
+  Ama eğer type="button" yaparsan, sadece bir buton olur ve hiçbir şey yapmaz.
+  Özetle
+  Özellik	<input type="submit">	<button>
+  Varsayılan davranış	Formu gönderir	Formu gönderir (type="submit" ile)
+  type="button" desteği	❌ Yok	✅ Evet, hiçbir şey yapmayan buton olarak kullanılabilir
+  İçerik desteği	Sadece value kullanır	HTML içerebilir (örneğin, <img>, <i>, <b> eklenebilir)
+  Tasarım esnekliği	Kısıtlıdır	Daha fazla stil ve içerik esnekliği sunar
+  ✅ Hangisini kullanmalısın?
+  
+  Formu göndermek istiyorsan:
+  <input type="submit"> veya <button type="submit"> kullanabilirsin.
+  Tıklama ile JavaScript çalıştıracaksan:
+  <button type="button"> kullanmalısın.
+  Formu temizlemek istiyorsan:
+  <button type="reset"> kullanabilirsin.
+  Genellikle <button> daha esnektir, çünkü içine ikon, metin, HTML vb. eklenebilir ve farklı type değerleri ile farklı işler yapabilir.
+  -->

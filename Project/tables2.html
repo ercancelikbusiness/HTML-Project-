@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Personel Listesi</title>
+</head>
+
+<!--  <thead> - Tablo Başlığı (Table Head) <thead> etiketi, tablonun başlık kısmını tanımlar ve genellikle sütun başlıkları olan <th> (table header) etiketlerini içerir. <tbody> etiketi, tablonun veri kısmını tanımlar. Yani, her satırda yer alan veri hücrelerini içeren bölümdür.border="1", tablonun etrafında 1 piksel kalınlığında bir kenarlık (çerçeve) oluşturan bir özelliktir-->
+
+  
+<body>
+
+<table border="1">
+    
+    <caption>Personel Listesi</caption>
+    <thead>
+        <tr>
+            <th>Kişi</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Ercan Çelik</td>
+            <td>ercancelikbusiness@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Ercan Çelik2</td>
+            <td>ercancelikbusiness@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Ercan Çelik3</td>
+            <td>ercancelikbusiness@gmail.com</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
+
+<!-- 🛠  "tables" dosyasına göre ekstra Yaptığım İyileştirmeler:
+1️⃣ <html> ve <body> etiketlerini ekledim → HTML yapısını tam hale getirdim.
+2️⃣ Eksik <tr> etiketi ekledim → <th> etiketleri doğrudan <tr> içine alınmalıdır.
+3️⃣ <thead> ve <tbody> ekledim → Tablonun yapısını daha anlamlı hale getirdim.
+4️⃣ border="1" ekledim → Tabloyu daha görünür hale getirmek için (görsel amaçlı).
+5️⃣ <meta charset="UTF-8"> ekledim → Türkçe karakterler için gerekli.
+Eğer bu olmazsa, Türkçe harfler bozulabilir (� gibi garip semboller çıkabilir
+6️⃣ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+Mobil cihazlarda sayfanın düzgün görüntülenmesini sağlar.
+width=device-width → Cihazın ekran genişliğine göre ölçeklenir.
+initial-scale=1.0 → Sayfa açıldığında %100 zoom oranında başlar.
+📌 Bu meta etiketi olmazsa, sayfa mobilde çok küçük ya da çok büyük görünebilir.💡 Tavsiyem: Her HTML dosyasında bu üç etiketi kullanmalısın. Çünkü SEO, erişilebilirlik ve mobil uyumluluk için çok önemlidir. 🚀
+
+<title> Etiketi Nedir ve Ne İşe Yarar?
+
+<title>Personel Listesi</title>
+<title> etiketi, tarayıcı sekmesinde görünen sayfa başlığını tanımlar.
+Sayfanın başlık kısmı arama motorlarına sayfanın içeriği hakkında bilgi verir, bu da SEO (arama motoru optimizasyonu) için faydalıdır.
+Ayrıca, sayfa favorilere kaydedildiğinde de başlık olarak görünür.-->
